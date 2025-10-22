@@ -24,6 +24,7 @@ dependencies:
   # Icons 
   cupertino_icons: ^1.0.2
   get: ^4.6.5
+  iconsax: ^0.0.8
 
   # State Management
 
