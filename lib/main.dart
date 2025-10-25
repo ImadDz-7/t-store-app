@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:t_store_app/app.dart';
 
 void main() {
+
+  // Todo: Add Widgets Bindings
+  // Todo: Init Local Storage
+  // Todo: Await Native Splash
+  // Todo: Initialize Firebase
+  // Todo: Initialize Authentication
+
   runApp(const TStoreApp());
 }
 
-class TStoreApp extends StatelessWidget {
-  const TStoreApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(),
-    );
-  }
-}
