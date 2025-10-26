@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:t_store_app/utils/theme/theme.dart';
 
 class TStoreApp extends StatelessWidget {
   const TStoreApp({super.key});
@@ -6,6 +7,9 @@ class TStoreApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      themeMode: ThemeMode.system,
+      theme: TAppTheme.lightTheme,
+      darkTheme: TAppTheme.darkTheme,
       home: Scaffold(),
     );
   }
