@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:t_store_app/features/authentication/screens/widgets/onboarding_screen_widget.dart';
 import 'package:t_store_app/utils/constants/image_strings.dart';
 import 'package:t_store_app/utils/constants/sizes.dart';
 import 'package:t_store_app/utils/constants/text_strings.dart';
@@ -14,26 +15,21 @@ class OnBoardingScreen extends StatelessWidget {
         children: [
           /// Horizontal Scrollable Pages
           PageView(
-            children: [
-              Column(
-                children: [
-                  Image(
-                    width: THelperFunctions.screenWidth() * 0.8,
-                    height: THelperFunctions.screenHeight() * 0.6,
-                    image: const AssetImage(TImages.onBoardingImage1),
-                  ),
-                  Text(
-                    TTexts.onBoardingTitle1,
-                    style: Theme.of(context).textTheme.headlineMedium,
-                    textAlign: TextAlign.center,
-                  ),
-                  const SizedBox(height: TSizes.spaceBtwItems),
-                  Text(
-                    TTexts.onBoardingSubTitle1,
-                    style: Theme.of(context).textTheme.bodyMedium,
-                    textAlign: TextAlign.center,
-                  ),
-                ],
+            children: const [
+              OnBoardingPage(
+                image: TImages.onBoardingImage1,
+                title: TTexts.onBoardingTitle1,
+                subTitle: TTexts.onBoardingSubTitle1,
+              ),
+              OnBoardingPage(
+                image: TImages.onBoardingImage2,
+                title: TTexts.onBoardingTitle2,
+                subTitle: TTexts.onBoardingSubTitle2,
+              ),
+              OnBoardingPage(
+                image: TImages.onBoardingImage3,
+                title: TTexts.onBoardingTitle3,
+                subTitle: TTexts.onBoardingSubTitle3,
               ),
             ],
           ),
@@ -48,3 +44,4 @@ class OnBoardingScreen extends StatelessWidget {
     );
   }
 }
+
