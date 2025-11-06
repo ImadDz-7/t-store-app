@@ -3,6 +3,7 @@ import 'package:t_store_app/features/authentication/screens/widgets/onboarding_s
 import 'package:t_store_app/utils/constants/image_strings.dart';
 import 'package:t_store_app/utils/constants/sizes.dart';
 import 'package:t_store_app/utils/constants/text_strings.dart';
+import 'package:t_store_app/utils/device/device_utility.dart';
 import 'package:t_store_app/utils/helpers/helper_functions.dart';
 
 class OnBoardingScreen extends StatelessWidget {
@@ -35,6 +36,14 @@ class OnBoardingScreen extends StatelessWidget {
           ),
 
           /// Skip Button
+          Positioned(
+            top: TDeviceUtils.getAppBarHeight(),
+            right: TSizes.defaultSpace,
+            child: TextButton(
+              onPressed: () {},
+              child: Text('Skip'),
+            ),
+          ),
 
           /// Dot Navigation SmoothPageIndicator
 
@@ -44,4 +53,3 @@ class OnBoardingScreen extends StatelessWidget {
     );
   }
 }
-
