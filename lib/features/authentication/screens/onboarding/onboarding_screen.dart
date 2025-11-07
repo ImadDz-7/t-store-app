@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:t_store_app/features/authentication/screens/widgets/onboarding_screen_widget.dart';
+import 'package:t_store_app/features/authentication/screens/onboarding/widgets/onboarding_screen_widget.dart';
+import 'package:t_store_app/features/authentication/screens/onboarding/widgets/onboarding_skip_button.dart';
 import 'package:t_store_app/utils/constants/image_strings.dart';
 import 'package:t_store_app/utils/constants/sizes.dart';
 import 'package:t_store_app/utils/constants/text_strings.dart';
@@ -36,14 +37,7 @@ class OnBoardingScreen extends StatelessWidget {
           ),
 
           /// Skip Button
-          Positioned(
-            top: TDeviceUtils.getAppBarHeight(),
-            right: TSizes.defaultSpace,
-            child: TextButton(
-              onPressed: () {},
-              child: Text('Skip'),
-            ),
-          ),
+          const OnBoardingSkipButton(),
 
           /// Dot Navigation SmoothPageIndicator
 
@@ -53,3 +47,5 @@ class OnBoardingScreen extends StatelessWidget {
     );
   }
 }
+
+
