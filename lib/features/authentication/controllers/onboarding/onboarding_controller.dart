@@ -1,12 +1,15 @@
+import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
 class OnBoardingController extends GetxController {
   static OnBoardingController get instance => Get.find();
 
   /// Variables
+  final pageController = PageController();
+  RxInt currentPageIndex = 0.obs;
 
   /// Update Current Index when Page scroll
-  void updatePageIndicator(index) {}
+  void updatePageIndicator(index) => currentPageIndex = index;
 
   /// Jump to the specific dot selected page
   void dotNavigationClick(index) {}

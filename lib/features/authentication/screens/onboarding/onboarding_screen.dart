@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:t_store_app/features/authentication/controllers/onboarding/onboarding_controller.dart';
 import 'package:t_store_app/features/authentication/screens/onboarding/widgets/onboarding_dot_navigation.dart';
 import 'package:t_store_app/features/authentication/screens/onboarding/widgets/onboarding_next_button.dart';
 import 'package:t_store_app/features/authentication/screens/onboarding/widgets/onboarding_screen_widget.dart';
@@ -17,6 +19,8 @@ class OnBoardingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(OnBoardingController());
+    
     return Scaffold(
       body: Stack(
         children: [
