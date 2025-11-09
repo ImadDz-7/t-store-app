@@ -18,11 +18,18 @@ class OnBoardingController extends GetxController {
   }
 
   /// Update Current Index & Jump to the next page
-  void nextPage() {}
+  void nextPage() {
+    if(currentPageIndex.value == 2){
+      // Get.to(LoginScree());
+    }else {
+      int page = currentPageIndex.value + 1;
+      pageController.jumpToPage(page);
+    }
+  }
 
   /// Update Current Index & Jump to the last page
   void skipPage() {
     currentPageIndex.value = 2;
-    pageController.jumpTo(2);
+    pageController.jumpToPage(2);
   }
 }
