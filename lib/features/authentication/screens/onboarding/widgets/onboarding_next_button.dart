@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:t_store_app/features/authentication/controllers/onboarding/onboarding_controller.dart';
 import 'package:t_store_app/utils/constants/colors.dart';
 import 'package:t_store_app/utils/constants/sizes.dart';
 import 'package:t_store_app/utils/device/device_utility.dart';
@@ -24,7 +25,7 @@ class OnBoardingNextButton extends StatelessWidget {
           ),
           backgroundColor: dark ? TColors.primary : TColors.black,
         ),
-        onPressed: () {},
+        onPressed: () => OnBoardingController.instance.nextPage(),
         child: const Icon(Iconsax.arrow_right_3),
       ),
     );
