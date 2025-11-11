@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:t_store_app/common/styles/spacing_styles.dart';
 import 'package:t_store_app/utils/constants/sizes.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -9,12 +10,7 @@ class LoginScreen extends StatelessWidget {
     return const Scaffold(
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.only(
-            top: TSizes.appBarHeight,
-            bottom: TSizes.defaultSpace,
-            left: TSizes.defaultSpace,
-            right: TSizes.defaultSpace,
-          ),
+          padding: TSpacingStyle.paddingWithAppBarHeight,
         ),
       ),
     );
