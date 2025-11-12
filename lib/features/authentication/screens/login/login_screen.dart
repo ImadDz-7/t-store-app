@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:t_store_app/common/styles/spacing_styles.dart';
 import 'package:t_store_app/utils/constants/image_strings.dart';
 import 'package:t_store_app/utils/constants/sizes.dart';
+import 'package:t_store_app/utils/constants/text_strings.dart';
 import 'package:t_store_app/utils/helpers/helper_functions.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -19,13 +20,21 @@ class LoginScreen extends StatelessWidget {
             children: [
               /// Logo, Title & SubTitle
               Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Image(
                     image: AssetImage(
                       dark ? TImages.lightAppLogo : TImages.darkAppLogo,
                     ),
                   ),
-
+                  Text(
+                    TTexts.loginTitle,
+                    style: Theme.of(context).textTheme.headlineMedium,
+                  ),
+                  Text(
+                    TTexts.loginSubtitle,
+                    style: Theme.of(context).textTheme.bodyMedium,
+                  ),
                 ],
               ),
             ],
