@@ -58,6 +58,29 @@ class LoginScreen extends StatelessWidget {
                         labelText: TTexts.password,
                       ),
                     ),
+                    const SizedBox(height: TSizes.spaceBtwInputFields / 2),
+
+                    /// Remember Me & Forget Password
+                    Row(
+                      children: [
+                        /// Remember Me
+                        Row(
+                          children: [
+                            Checkbox(
+                              value: true,
+                              onChanged: (value) {},
+                            ),
+                            const Text(TTexts.rememberMe),
+                          ],
+                        ),
+
+                        /// Forget Password
+                        TextButton(
+                          onPressed: (){},
+                          child: const Text(TTexts.forgetPassword),
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ),
