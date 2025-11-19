@@ -76,10 +76,20 @@ class LoginScreen extends StatelessWidget {
 
                         /// Forget Password
                         TextButton(
-                          onPressed: (){},
+                          onPressed: () {},
                           child: const Text(TTexts.forgetPassword),
                         ),
                       ],
+                    ),
+                    // const SizedBox(height: TSizes.spaceBtwSections),
+
+                    /// Sign in Button
+                    SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        child: const Text(TTexts.signIn),
+                      ),
                     ),
                   ],
                 ),
