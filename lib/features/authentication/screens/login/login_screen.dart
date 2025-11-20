@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store_app/common/styles/spacing_styles.dart';
+import 'package:t_store_app/utils/constants/colors.dart';
 import 'package:t_store_app/utils/constants/image_strings.dart';
 import 'package:t_store_app/utils/constants/sizes.dart';
 import 'package:t_store_app/utils/constants/text_strings.dart';
@@ -43,7 +44,8 @@ class LoginScreen extends StatelessWidget {
               /// Form
               Form(
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: TSizes.spaceBtwSections),
+                  padding: const EdgeInsets.symmetric(
+                      vertical: TSizes.spaceBtwSections),
                   child: Column(
                     children: [
                       /// Emain
@@ -95,6 +97,7 @@ class LoginScreen extends StatelessWidget {
                           child: const Text(TTexts.signIn),
                         ),
                       ),
+                      const SizedBox(height: TSizes.spaceBtwItems),
 
                       /// Create Account Button
                       SizedBox(
@@ -107,6 +110,33 @@ class LoginScreen extends StatelessWidget {
                     ],
                   ),
                 ),
+              ),
+
+              /// Divider
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Flexible(
+                    child: Divider(
+                      color: dark ? TColors.darkGrey : TColors.grey,
+                      thickness: 0.5,
+                      indent: 60,
+                      endIndent: 5,
+                    ),
+                  ),
+                  Text(
+                    TTexts.orSignInWith,
+                    style: Theme.of(context).textTheme.labelMedium,
+                  ),
+                  Flexible(
+                    child: Divider(
+                      color: dark ? TColors.darkGrey : TColors.grey,
+                      thickness: 0.5,
+                      indent: 5,
+                      endIndent: 60,
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
