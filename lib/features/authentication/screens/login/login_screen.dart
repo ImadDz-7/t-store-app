@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store_app/common/styles/spacing_styles.dart';
+import 'package:t_store_app/common/widgets/login_signup/form_divider.dart';
+import 'package:t_store_app/common/widgets/login_signup/social_buttons.dart';
+import 'package:t_store_app/features/authentication/screens/login/widgets/login_screen_form.dart';
+import 'package:t_store_app/features/authentication/screens/login/widgets/login_screen_header.dart';
 import 'package:t_store_app/utils/constants/colors.dart';
 import 'package:t_store_app/utils/constants/image_strings.dart';
 import 'package:t_store_app/utils/constants/sizes.dart';
@@ -21,159 +25,17 @@ class LoginScreen extends StatelessWidget {
           child: Column(
             children: [
               /// Logo, Title & SubTitle
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Image(
-                    height: 85,
-                    image: AssetImage(
-                      dark ? TImages.lightAppLogo : TImages.darkAppLogo,
-                    ),
-                  ),
-                  Text(
-                    TTexts.loginTitle,
-                    style: Theme.of(context).textTheme.headlineMedium,
-                  ),
-                  Text(
-                    TTexts.loginSubtitle,
-                    style: Theme.of(context).textTheme.bodyMedium,
-                  ),
-                ],
-              ),
+              TLoginHeader(dark: dark),
 
               /// Form
-              Form(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(
-                      vertical: TSizes.spaceBtwSections),
-                  child: Column(
-                    children: [
-                      /// Emain
-                      TextFormField(
-                        decoration: const InputDecoration(
-                          prefixIcon: Icon(Iconsax.direct_right),
-                          labelText: TTexts.email,
-                        ),
-                      ),
-                      const SizedBox(height: TSizes.spaceBtwInputFields),
-                      TextFormField(
-                        decoration: const InputDecoration(
-                          prefixIcon: Icon(Iconsax.password_check),
-                          suffixIcon: Icon(Iconsax.eye_slash),
-                          labelText: TTexts.password,
-                        ),
-                      ),
-                      const SizedBox(height: TSizes.spaceBtwInputFields / 2),
-
-                      /// Remember Me & Forget Password
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          /// Remember Me
-                          Row(
-                            children: [
-                              Checkbox(
-                                value: true,
-                                onChanged: (value) {},
-                              ),
-                              const Text(TTexts.rememberMe),
-                            ],
-                          ),
-
-                          /// Forget Password
-                          TextButton(
-                            onPressed: () {},
-                            child: const Text(TTexts.forgetPassword),
-                          ),
-                        ],
-                      ),
-                      // const SizedBox(height: TSizes.spaceBtwSections),
-
-                      /// Sign in Button
-                      SizedBox(
-                        width: double.infinity,
-                        child: ElevatedButton(
-                          onPressed: () {},
-                          child: const Text(TTexts.signIn),
-                        ),
-                      ),
-                      const SizedBox(height: TSizes.spaceBtwItems),
-
-                      /// Create Account Button
-                      SizedBox(
-                        width: double.infinity,
-                        child: OutlinedButton(
-                          onPressed: () {},
-                          child: const Text(TTexts.createAccount),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              const TLoginForm(),
 
               /// Divider
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Flexible(
-                    child: Divider(
-                      color: dark ? TColors.darkGrey : TColors.grey,
-                      thickness: 0.5,
-                      indent: 60,
-                      endIndent: 5,
-                    ),
-                  ),
-                  Text(
-                    TTexts.orSignInWith,
-                    style: Theme.of(context).textTheme.labelMedium,
-                  ),
-                  Flexible(
-                    child: Divider(
-                      color: dark ? TColors.darkGrey : TColors.grey,
-                      thickness: 0.5,
-                      indent: 5,
-                      endIndent: 60,
-                    ),
-                  ),
-                ],
-              ),
+              TFormDivider(dark: dark),
               const SizedBox(height: TSizes.spaceBtwSections),
 
               /// Footer
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      border: Border.all(color: TColors.grey),
-                      borderRadius: BorderRadius.circular(100),
-                    ),
-                    child: IconButton(
-                      onPressed: (){},
-                      icon: const Image(
-                        width: TSizes.iconMd,
-                        height: TSizes.iconMd,
-                        image: AssetImage(TImages.google),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(width: TSizes.spaceBtwItems),
-                  Container(
-                    decoration: BoxDecoration(
-                      border: Border.all(color: TColors.grey),
-                      borderRadius: BorderRadius.circular(100),
-                    ),
-                    child: IconButton(
-                      onPressed: (){},
-                      icon: const Image(
-                        width: TSizes.iconMd,
-                        height: TSizes.iconMd,
-                        image: AssetImage(TImages.facebook),
-                      ),
-                    ),
-                  ),
-              ],),
+              const TSocialButtons(),
             ],
           ),
         ),
@@ -181,3 +43,4 @@ class LoginScreen extends StatelessWidget {
     );
   }
 }
+
