@@ -5,10 +5,11 @@ import 'package:t_store_app/utils/constants/text_strings.dart';
 class TFormDivider extends StatelessWidget {
   const TFormDivider({
     Key? key,
-    required this.dark,
+    required this.dark, required this.dividerText,
   }) : super(key: key);
 
   final bool dark;
+  final String dividerText;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +25,7 @@ class TFormDivider extends StatelessWidget {
           ),
         ),
         Text(
-          TTexts.orSignInWith,
+          dividerText,
           style: Theme.of(context).textTheme.labelMedium,
         ),
         Flexible(

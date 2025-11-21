@@ -13,7 +13,7 @@ class TLoginForm extends StatelessWidget {
     return Form(
       child: Padding(
         padding: const EdgeInsets.symmetric(
-            vertical: TSizes.spaceBtwSections),
+            vertical: TSizes.spaceBtwSections - 20),
         child: Column(
           children: [
             /// Emain

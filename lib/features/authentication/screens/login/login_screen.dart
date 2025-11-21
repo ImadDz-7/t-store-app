@@ -26,13 +26,17 @@ class LoginScreen extends StatelessWidget {
             children: [
               /// Logo, Title & SubTitle
               TLoginHeader(dark: dark),
+              // const SizedBox(height: TSizes.spaceBtwInputFields + 8),
 
               /// Form
               const TLoginForm(),
 
               /// Divider
-              TFormDivider(dark: dark),
-              const SizedBox(height: TSizes.spaceBtwSections),
+              TFormDivider(
+                dividerText: TTexts.orSignInWith,
+                dark: dark,
+              ),
+              const SizedBox(height: TSizes.spaceBtwSections - 30),
 
               /// Footer
               const TSocialButtons(),
@@ -43,4 +47,3 @@ class LoginScreen extends StatelessWidget {
     );
   }
 }
-

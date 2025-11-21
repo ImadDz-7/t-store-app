@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:t_store_app/utils/constants/image_strings.dart';
+import 'package:t_store_app/utils/constants/sizes.dart';
 import 'package:t_store_app/utils/constants/text_strings.dart';
 
 class TLoginHeader extends StatelessWidget {
@@ -21,9 +22,15 @@ class TLoginHeader extends StatelessWidget {
             dark ? TImages.lightAppLogo : TImages.darkAppLogo,
           ),
         ),
+        const SizedBox(
+          height: TSizes.sm + 8,
+        ),
         Text(
           TTexts.loginTitle,
           style: Theme.of(context).textTheme.headlineMedium,
+        ),
+        const SizedBox(
+          height: TSizes.sm,
         ),
         Text(
           TTexts.loginSubtitle,
