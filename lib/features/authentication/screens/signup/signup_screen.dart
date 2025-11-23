@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
 import 'package:t_store_app/utils/constants/sizes.dart';
 import 'package:t_store_app/utils/constants/text_strings.dart';
 
@@ -25,9 +26,28 @@ class SignupScreen extends StatelessWidget {
               Form(
                 child: Column(
                   children: [
+                    /// First & LastName
                     Row(
                       children: [
-                        
+                        Expanded(
+                          child: TextFormField(
+                            expands: false,
+                            decoration: const InputDecoration(
+                              labelText: TTexts.firstName,
+                              prefixIcon: Icon(Iconsax.user),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: TSizes.spaceBtwInputFields - 6),
+                        Expanded(
+                          child: TextFormField(
+                            expands: false,
+                            decoration: const InputDecoration(
+                              labelText: TTexts.lastName,
+                              prefixIcon: Icon(Iconsax.user),
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   ],
