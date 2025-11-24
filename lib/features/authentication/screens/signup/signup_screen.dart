@@ -20,7 +20,7 @@ class SignupScreen extends StatelessWidget {
                 TTexts.signupTitle,
                 style: Theme.of(context).textTheme.headlineMedium,
               ),
-              const SizedBox(height: TSizes.spaceBtwSections),
+              const SizedBox(height: TSizes.spaceBtwSections - 30),
 
               /// Form
               Form(
@@ -49,6 +49,44 @@ class SignupScreen extends StatelessWidget {
                           ),
                         ),
                       ],
+                    ),
+                    const SizedBox(height: TSizes.spaceBtwInputFields),
+
+                    /// Username
+                    TextFormField(
+                      decoration: const InputDecoration(
+                        labelText: TTexts.username,
+                        prefixIcon: Icon(Iconsax.user_edit),
+                      ),
+                    ),
+                    const SizedBox(height: TSizes.spaceBtwInputFields),
+
+                    /// Email
+                    TextFormField(
+                      expands: false,
+                      decoration: const InputDecoration(
+                        labelText: TTexts.email,
+                        prefixIcon: Icon(Iconsax.direct),
+                      ),
+                    ),
+                    const SizedBox(height: TSizes.spaceBtwInputFields),
+
+                    /// Phone Number
+                    TextFormField(
+                      decoration: const InputDecoration(
+                        labelText: TTexts.phoneNum,
+                        prefixIcon: Icon(Iconsax.call),
+                      ),
+                    ),
+                    const SizedBox(height: TSizes.spaceBtwInputFields),
+
+                    /// Password
+                    TextFormField(
+                      obscureText: true,
+                      decoration: const InputDecoration(
+                        labelText: TTexts.password,
+                        prefixIcon: Icon(Iconsax.password_check),
+                      ),
                     ),
                   ],
                 ),
